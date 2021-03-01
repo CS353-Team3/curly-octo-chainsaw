@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>Journal Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"> <!-- login box layout -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"> <!-- lock icon -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <div class = "form">
+      <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+      <input type="email" placeholder="email" id="email_field" />
+      <input type="password" placeholder="password" id="password_field" />
+      <button onclick="login()">Log In</button>
+      <a href="#" class="forgot">Forgot your email or password?</a>
+    </div>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome to Journal Blog</h3>
+    <p id="user_para">Welcome to Journal Blog. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+
+    var config = {
+
+    apiKey: "AIzaSyAIEtQLa_1GY6qIVk_npdke43ZLQ57DwW4",
+    authDomain: "cs353c-51bbb.firebaseapp.com",
+    databaseURL: "https://cs353c-51bbb-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "cs353c-51bbb",
+    storageBucket: "cs353c-51bbb.appspot.com",
+    messagingSenderId: "904959131599"
+
+
+
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
